@@ -7,7 +7,7 @@ Swift 4.0<br/>
 MacOS 10.12+
 
 # 功能介绍
-### 动态库注入与删除
+### 1、动态库注入与删除
 当添加动态库时，你需要进以下设置：
 * **选择一个待添加的动态库**： 你可以选择```framework```或其他任何文件作为动态库，Scalpel不会对你选择的文件做后缀检查，因为可能出于某些目的，你需要对文件名做一些混淆，比如你可能给某个动态库起名叫Button.png等等（唯一要注意的是，如果你选择的是 framework ，那么请不要更改它的后缀，因为Scalpel需要对framework做特殊处理）。
 
@@ -18,7 +18,7 @@ MacOS 10.12+
 ##### 示例：
 ![image](https://raw.githubusercontent.com/cjsliuj/ScalpelDocResource/master/DylibLinkAddExample.gif)
 
-### Ipa元数据修改
+### 2、Ipa元数据修改
 目前，可以修改的Ipa元数据有下面几种：
 * 版本号
 * App名称
@@ -28,7 +28,7 @@ MacOS 10.12+
 ##### 操作面板：
 ![image](https://raw.githubusercontent.com/cjsliuj/ScalpelDocResource/master/IpaMetaDataEditTab.png)
 
-### 重签名
+### 3、重签名
 你需要进行以下操作以完成重签名所需的相关信息设置：
 * **选择一个mobileprovision 文件**： 最简单的情况下，你只需要选择完 mobileprovision 文件即可完成重签名配置。
 * **选择一个签名证书**：如果你选择的 mobileprovision 文件中有多个证书，你可以在此处选择你想用于签名的证书(默认会选中 mobileprovision 中的第一个证书)。
