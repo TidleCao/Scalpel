@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EmbResourceSelectVC" customModule="Scalpel" customModuleProvider="target">
+            <connections>
+                <outlet property="_embPathTf" destination="zVk-gM-76b" id="eo1-dW-HxO"/>
+                <outlet property="_resourcePathTf" destination="eM8-9s-2jV" id="omf-i0-wBA"/>
+                <outlet property="_resourceSelectFlaglb" destination="9uT-aP-pbv" id="Nf6-X8-l7C"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="142"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aha-QN-93D">
+                    <rect key="frame" x="5" y="62" width="88" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="包内存放路径:" id="Awu-Jg-kmK">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9uT-aP-pbv">
+                    <rect key="frame" x="18" y="105" width="75" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="待添加资源:" id="QTz-it-m3b">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVk-gM-76b">
+                    <rect key="frame" x="105" y="60" width="305" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="请填写" bezelStyle="round" id="cEK-9s-TFU">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="se2-Rk-PAe">
+                    <rect key="frame" x="404" y="2" width="67" height="32"/>
+                    <buttonCell key="cell" type="push" title="确定" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Xkr-1G-BsW">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onclickOkBtn:" target="-2" id="tpQ-P3-7YK"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eM8-9s-2jV">
+                    <rect key="frame" x="105" y="103" width="305" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="请选择" bezelStyle="round" id="Wre-y3-LTd">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cAj-EE-gWw">
+                    <rect key="frame" x="426" y="104" width="39" height="19"/>
+                    <buttonCell key="cell" type="roundRect" title="选择" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tif-S8-SA1">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="cellTitle"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onclickResourceSelectBtn:" target="-2" id="39Z-aj-RWD"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EXG-f1-5Mc">
+                    <rect key="frame" x="339" y="2" width="67" height="32"/>
+                    <buttonCell key="cell" type="push" title="取消" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0tO-bV-1F6">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onclickCancelBtn:" target="-2" id="pcr-fe-9Vq"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kQX-iG-0sO" customClass="HelpButton" customModule="Scalpel" customModuleProvider="target">
+                    <rect key="frame" x="426" y="64" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="kQX-iG-0sO" secondAttribute="height" multiplier="1:1" id="JZY-h6-tSD"/>
+                        <constraint firstAttribute="width" constant="15" id="OMt-63-vhy"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="t12-rE-dHg">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hint" value="该处填写的是相对路径，不可以使用&quot;/&quot;开头。路径根目录是Main Bundle（也就是Ipa解压后的Payload/xxxx.app目录）。"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="zVk-gM-76b" firstAttribute="trailing" secondItem="eM8-9s-2jV" secondAttribute="trailing" id="4eS-HL-5pX"/>
+                <constraint firstItem="EXG-f1-5Mc" firstAttribute="centerY" secondItem="se2-Rk-PAe" secondAttribute="centerY" id="Aa0-ze-xuZ"/>
+                <constraint firstItem="eM8-9s-2jV" firstAttribute="leading" secondItem="9uT-aP-pbv" secondAttribute="trailing" constant="14" id="Etx-Xx-bMy"/>
+                <constraint firstItem="aha-QN-93D" firstAttribute="trailing" secondItem="9uT-aP-pbv" secondAttribute="trailing" id="Mwd-aj-hMM"/>
+                <constraint firstItem="eM8-9s-2jV" firstAttribute="centerY" secondItem="9uT-aP-pbv" secondAttribute="centerY" id="OUE-rO-eT6"/>
+                <constraint firstAttribute="trailing" secondItem="cAj-EE-gWw" secondAttribute="trailing" constant="15" id="PEM-Fp-5TY"/>
+                <constraint firstItem="cAj-EE-gWw" firstAttribute="leading" secondItem="eM8-9s-2jV" secondAttribute="trailing" constant="16" id="QW7-4K-qcJ"/>
+                <constraint firstItem="aha-QN-93D" firstAttribute="top" secondItem="9uT-aP-pbv" secondAttribute="bottom" constant="26" id="VGt-5Z-YLF"/>
+                <constraint firstItem="se2-Rk-PAe" firstAttribute="leading" secondItem="EXG-f1-5Mc" secondAttribute="trailing" constant="10" id="WGu-bR-0Pz"/>
+                <constraint firstItem="9uT-aP-pbv" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="WbJ-mz-k6N"/>
+                <constraint firstItem="zVk-gM-76b" firstAttribute="centerY" secondItem="aha-QN-93D" secondAttribute="centerY" id="aKV-Ng-2B4"/>
+                <constraint firstItem="9uT-aP-pbv" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="ek0-3p-102"/>
+                <constraint firstItem="kQX-iG-0sO" firstAttribute="leading" secondItem="cAj-EE-gWw" secondAttribute="leading" id="fUi-cM-edv"/>
+                <constraint firstAttribute="bottom" secondItem="se2-Rk-PAe" secondAttribute="bottom" constant="9" id="icv-e9-sut"/>
+                <constraint firstItem="cAj-EE-gWw" firstAttribute="centerY" secondItem="eM8-9s-2jV" secondAttribute="centerY" id="lbm-Va-PYc"/>
+                <constraint firstItem="zVk-gM-76b" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="mm5-5g-wPX"/>
+                <constraint firstItem="se2-Rk-PAe" firstAttribute="trailing" secondItem="cAj-EE-gWw" secondAttribute="trailing" id="ogJ-vO-gPG"/>
+                <constraint firstItem="kQX-iG-0sO" firstAttribute="centerY" secondItem="zVk-gM-76b" secondAttribute="centerY" id="pZd-1e-5dL"/>
+                <constraint firstItem="zVk-gM-76b" firstAttribute="leading" secondItem="eM8-9s-2jV" secondAttribute="leading" id="tYJ-zN-6jI"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="103"/>
+        </customView>
+    </objects>
+</document>
