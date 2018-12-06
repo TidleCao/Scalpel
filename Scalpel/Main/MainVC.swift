@@ -85,6 +85,9 @@ class MainVC: NSViewController, NSTableViewDelegate, NSTableViewDataSource{
                 try! ShellCmds.unzip(filePath: ipaPath, toDirectory: upZipDir.path)
             }
             hud.message = "macho analysis..."
+            /*
+             For AppStore cracked ipa, Payload path will not at the root path of upZipDir
+             */
             let payloadPath = { () -> String in
                 let opt = FileSearcher.SearchOption()
                 opt.maxResultNumbers = 1
