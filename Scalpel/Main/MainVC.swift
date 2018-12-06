@@ -85,7 +85,14 @@ class MainVC: NSViewController, NSTableViewDelegate, NSTableViewDataSource{
                 try! ShellCmds.unzip(filePath: ipaPath, toDirectory: upZipDir.path)
             }
             hud.message = "macho analysis..."
-            self._rawIpaPayloadHandle = IpaPayloadHandle.init(payload: upZipDir.appendingPathComponent("Payload"))
+            let payloadPath = { () -> String in
+                let opt = FileSearcher.SearchOption()
+                opt.maxResultNumbers = 1
+                opt.searchItemType = [.directory]
+                opt.maxSearchDepth = 2
+                return FileSearcher.searchItems(nameMatchPattern: "Payload$", inDirectory: upZipDir.path, option: opt).first!
+            }()
+            self._rawIpaPayloadHandle = IpaPayloadHandle.init(payload: URL(fileURLWithPath: payloadPath))
             let dylibLinks = self._rawIpaPayloadHandle.getDylibLinks()
             hud.hide()
             DispatchQueue.main.async {
