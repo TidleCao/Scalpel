@@ -1,5 +1,5 @@
 # Scalpel
-Scalpels是一款集动态库注入与删除、Ipa元数据修改、重签名功能为一体的MacOS应用，旨在为您提供贴心的一条龙服务。
+Scalpels是一款集动态库注入与删除、IPA元数据修改、重签名功能为一体的MacOS应用，旨在为您提供贴心的一条龙服务。
 
 [Scalpel的实现](https://blog.csdn.net/jerryandliujie/article/details/84845162)
 # 环境
@@ -19,8 +19,8 @@ MacOS 10.12+
 ##### 示例：
 ![image](https://raw.githubusercontent.com/cjsliuj/ScalpelDocResource/master/DylibLinkAddExample.gif)
 
-### 2、Ipa元数据修改
-目前，可以修改的Ipa元数据有下面几种：
+### 2、IPA元数据修改
+目前，可以修改的IPA元数据有下面几种：
 * 版本号
 * App名称
 * 添加额外的资源文件
@@ -58,4 +58,4 @@ MacOS 10.12+
 * **Nested App 配置：** 此处用于给 Nested App(Extension)配置签名用的 mobileprovision 文件，该mobileprovision文件中的BundleID务必是要以主App的BundleID为前缀的(如果你是一个iOS开发者，你应该会很清楚的这一点)。当然， 如果你觉得Nested App对你没什么用处，那你可以在**元数据修改 Tab**中将相应的**Nested App**删除，这样就不需要给**Nested App**配置 mobileprovision 文件了。
 
 ##### 操作面板：
-![image](https://raw.githubusercontent.com/cjsliuj/ScalpelDocResource/master/ResignConfigTab.png)
+![image](https://raw.githubusercontent.com/cjsliuj/ScalpelDocResource/master/ResignConfigTab.png
