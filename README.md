@@ -58,4 +58,4 @@ MacOS 10.12+
 * **Nested App 配置：** 此处用于给 Nested App(Extension)配置签名用的 mobileprovision 文件，该mobileprovision文件中的BundleID务必是要以主App的BundleID为前缀的(如果你是一个iOS开发者，你应该会很清楚的这一点)。当然， 如果你觉得Nested App对你没什么用处，那你可以在**元数据修改 Tab**中将相应的**Nested App**删除，这样就不需要给**Nested App**配置 mobileprovision 文件了。
 
 ##### 操作面板：
-![image](https://raw.githubusercontent.com/cjsliuj/ScalpelDocResource/master/ResignConfigTab.png
+![image](https://raw.githubusercontent.com/cjsliuj/ScalpelDocResource/master/ResignConfigTab.png)
