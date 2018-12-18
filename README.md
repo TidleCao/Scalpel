@@ -1,6 +1,7 @@
 # Scalpel
 Scalpels是一款集动态库注入与删除、Ipa元数据修改、重签名功能为一体的MacOS应用，旨在为您提供贴心的一条龙服务。
 
+[Scalpel的实现](https://blog.csdn.net/jerryandliujie/article/details/84845162)
 # 环境
 Xcode10.1<br/>
 Swift 4.0<br/>
