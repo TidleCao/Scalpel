@@ -1,5 +1,5 @@
 PODS:
-  - MachoHandle (0.1)
+  - MachoHandle (0.2)
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
@@ -16,11 +16,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   MachoHandle:
-    :commit: aa0af594d9c8757ea65c9f5e79d4d3c2ccf44e65
+    :commit: a59ca529eae6aa352c06a952e96de848b1f4f9ff
     :git: https://github.com/cjsliuj/MachoHandle.git
 
 SPEC CHECKSUMS:
-  MachoHandle: b7f7710ff934642afd723ddb85c4f8d842a40c6b
+  MachoHandle: af11f9b95b497095b73f98ec05ee4c801ce14356
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
 PODFILE CHECKSUM: b6982e57547bcbacba44af12e22e2450878a383f
